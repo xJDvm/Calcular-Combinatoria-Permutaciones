@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    padding: 4rem;
+}
+
+input {
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: solid 1px #cccccc;
+}
+
+.btn-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(112, 0, 216);
+    color: white;
+    padding: 1rem;
+}
