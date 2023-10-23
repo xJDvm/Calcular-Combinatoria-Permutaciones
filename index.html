@@ -7,23 +7,30 @@
     <title>Combinatorias</title>
 </head>
 <body>
-    <h1>Calculadora de combinatorias</h1>
-    <div>
-        <form action="">
-            <label>Valor de N</label>
-            <input type="number">
-
-            <label>Valor de K</label>
-            <input type="number">
-
-            <div class="btn-container">
-                <button id="btn-combine" class="btn">Calcular combinatoria</button>
-                <button id="btn-permutate" class="btn">Calcular permutaciones</button>
+    <header>
+        <h1>Calculadora de Combinatorias</h1>
+    </header>
+    <main>
+        <div class="calculator">
+            <form>
+                <div class="input-container">
+                    <label for="n">Valor de N</label>
+                    <input type="number" id="n">
+                </div>
+                <div class="input-container">
+                    <label for="k">Valor de K</label>
+                    <input type="number" id="k">
+                </div>
+                <div class="btn-container">
+                    <button id="btn-combine" class="btn">Calcular Combinatoria</button>
+                    <button id="btn-permutate" class="btn">Calcular Permutaciones</button>
+                </div>
+            </form>
+            <div class="result">
+                <p>Resultado:</p>
+                <p id="calc-result"></p>
             </div>
-        </form>
-
-        <p></p>
-        <p></p>
-    </div>
+        </div>
+    </main>
 </body>
 </html>
