@@ -19,9 +19,14 @@ h1 {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
+}
+
+.tabs {
+    margin-top: 2rem;
 }
 
 .calculator {
@@ -30,7 +35,7 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 2rem;
     text-align: center;
-    margin-top: -2rem; /* Ajuste para elevar el div "calculator" */
+    margin-top: 2rem; /* Ajuste para elevar el div "calculator" */
 }
 
 form {
