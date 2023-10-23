@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
-    function calcularCombinatoria() {g
+    function calcularCombinatoria() {
         const n = parseInt(nInput.value);
         const k = parseInt(kInput.value);
 
