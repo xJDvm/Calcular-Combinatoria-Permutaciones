@@ -22,18 +22,25 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 70vh;
 }
 
 .tabs {
     margin-top: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .calculator {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 2rem;
+    width: 30%;
+    height: 500px;
     text-align: center;
     margin-top: 2rem; /* Ajuste para elevar el div "calculator" */
 }
@@ -47,6 +54,7 @@ form {
 .input-container {
     display: flex;
     flex-direction: column;
+    height: 100px;
 }
 
 label {
