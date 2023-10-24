@@ -1,45 +1,34 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const nInput = document.getElementById('n');
-    const kInput = document.getElementById('k');
     const calcResult = document.getElementById('calc-result');
     const btnPermutate = document.getElementById('btn-permutate');
     
-    btnPermutate.addEventListener('click', calcularPermutacionesRepetidas);
-    
-    function calcularPermutacionesRepetidas() {
-        const n = parseInt(nInput.value);
-        const k = parseInt(kInput.value);
-
-        if (n < 0 || k < 0 || k > n) {
-            calcResult.textContent = 'El valor de "k" debe ser menor al valor de "n"';
-            return;
+    function calculateExpression() {
+        // Obtén el valor de "n" y "k"
+        const n = parseInt(document.getElementById("n").value);
+        const kInput = document.getElementById("k").value;
+        const kArray = kInput.split(',').map(item => parseInt(item));
+      
+        // Calcula el factorial de un número
+        function factorial(num) {
+          if (num === 0 || num === 1) {
+            return 1;
+          }
+          return num * factorial(num - 1);
         }
-        const denominador = calcularDenominador(k);
-        const permutaciones = calcularPermutacionesConRepeticiones(n, k) / denominador;
-        calcResult.textContent = permutaciones;
+      
+        // Calcula el factorial de n
+        const nFactorial = factorial(n);
+      
+        // Calcula el producto de los factoriales de k0, k1, ...
+        const productOfKFactorials = kArray.reduce((acc, k) => acc * factorial(k), 1);
+      
+        // Calcula el resultado
+        const result = nFactorial / productOfKFactorials;
+
+        calcResult.textContent = `Permutacion con repeticion: ${result}`;
     }
 
-    function calcularDenominador(k) {
-        let denominador = 1;
-
-        for (let i = 1; i <= k; i++) {
-            denominador *= i;
-        }
-
-        return denominador;
-    }
-
-    function calcularPermutacionesConRepeticiones(n, k) {
-        if (k <= 0 || n <= 0) {
-            return "El valor de K y N debe ser positivo.";
-        }
-
-        let resultado = 1;
-
-        for (let i = 0; i < k; i++) {
-            resultado *= (n - i);
-        }
-
-        return resultado;
-    }
+    btnPermutate.addEventListener('click', function() {
+        calculateExpression();
+    });
 });
